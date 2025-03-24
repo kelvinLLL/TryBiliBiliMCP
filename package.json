@@ -1,0 +1,27 @@
+{
+  "name": "bilibili-mcp-js",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/tough-cookie": "^4.0.5"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "scripts": {
+    "start": "node --loader ts-node/esm bilibili-mcp-server.ts",
+    "test": "node test.js",
+    "build:bun": "bun build bilibili-mcp-server.ts --outfile ./dist/index.js --target node",
+    "inspector": "npx @modelcontextprotocol/inspector ./dist/index.js"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "axios": "^1.8.4",
+    "tough-cookie": "^5.1.2",
+    "ts-node": "^10.9.2"
+  }
+}
