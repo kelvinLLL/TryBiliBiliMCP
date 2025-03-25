@@ -1,7 +1,7 @@
 # Bilibili MCP
 
 ## 简介
-这是一个基于 Model Context Protocol (MCP) 的 B站视频搜索服务器。该服务器提供了简单的 API 接口，允许用户搜索 B站 的视频内容。
+这是一个基于 Model Context Protocol (MCP) 的 B站视频搜索服务器。该服务器提供了简单的 API 接口，允许用户搜索 B站 的视频内容。langchain例子使用 [https://github.com/isaacwasserman/mcp-langchain-ts-client]
 
 ## 功能特点
 - B站视频搜索
