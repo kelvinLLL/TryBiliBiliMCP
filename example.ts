@@ -1,4 +1,4 @@
-import { MCPToolkit } from "./mcp-langchain-ts-client/index.ts";
+import { MCPToolkit } from "./mcp-langchain-ts-client/index.js";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
 import { ChatOpenAI } from "@langchain/openai";
 import { MemorySaver } from "@langchain/langgraph";
@@ -29,9 +29,9 @@ tools.forEach(tool => {
 const llm = new ChatOpenAI({
   modelName: "gpt-4o-mini",
   temperature: 0,
-  openAIApiKey: "key",
+  openAIApiKey: "your_api_key", // 替换成你模型的密钥
   configuration: {
-    baseURL: "https://404.com/v1", // 你可以根据需要修改这个 URL
+    baseURL: "https://www.api.com/v1", // 替换成你模型的API地址
   },
 });
 

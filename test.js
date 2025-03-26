@@ -1,10 +1,13 @@
 import { spawn } from "child_process";
 
 // 启动服务器进程
-const serverProcess = spawn("node", ["--loader", "ts-node/esm", "bilibili-mcp-server.ts"], {
-  stdio: ["pipe", "pipe", "inherit"],
-});
-
+const isBun = typeof process.versions.bun !== 'undefined';
+const serverProcess = spawn(
+  isBun ? "bun" : "node", 
+  isBun ? ["index.ts"] : ["--loader", "ts-node/esm", "index.ts"],
+  {stdio: ["pipe", "pipe", "inherit"]}
+  );
+ 
 // 准备简单的JSON-RPC请求
 const request = {
   jsonrpc: "2.0",
@@ -36,7 +39,7 @@ serverProcess.stdout.on("data", (data) => {
           version: "0.1.0",
           name: "bilibili-search",
           arguments: {
-            keyword: "美食家老八",
+            keyword: "岛市老八",
             limit: 10,
           },
         },
