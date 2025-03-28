@@ -6,8 +6,9 @@ import { HumanMessage } from "@langchain/core/messages";
 
 import path from "path";
 
+const isBun = typeof process.versions.bun !== 'undefined';
 const serverParams = {
-  command: "bun",
+  command: isBun ? "bun" : "node",
   args: [path.join(process.cwd(), "dist", "index.js")]
 };
 
