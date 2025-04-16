@@ -63,10 +63,27 @@ export async function searchBilibili(
 
   // 打印返回的数据
   // console.log("接口 Code:", response?.data?.code);
-  return (
-    response.data.data.result.find((item: any) => item.result_type === "video")
-      ?.data || []
-  );
+  if (response?.data?.code == 0) {
+    const res = response.data.data.result.find((item: any) => item.result_type === "video")
+    ?.data || []
+    res.forEach((item: any) => {
+      console.log(item);
+      item.arcurl = fixUrl(item.arcurl);
+      item.pic = fixUrl(item.pic);
+    });
+    return res;
+  } else {
+    console.log("搜索失败:", response?.data);
+    return []; 
+  }
+}
+
+function fixUrl(url: string): string {
+  if (url.startsWith("//")) {
+    return "https:" + url;
+  } else {
+    return url.replace(/^http:\/\//, "https://");
+  }
 }
 
 // 测试

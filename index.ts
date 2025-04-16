@@ -149,6 +149,8 @@ class BilibiliSearchServer {
         bvid: video.bvid || "",
         upic: video.upic || "",
         pic: video.pic || "",
+        tag: video.tag || "",
+        description: video.description || "",
       }));
 
       return results;
