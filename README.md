@@ -19,6 +19,20 @@
 ## 系统要求
 - Node.js >= 20.12.0
 
+## npm package
+感谢[HQHC](https://github.com/HQHC)发布的npm包
+```json
+{
+  "mcpServers": {
+    "bilibili-search": {
+    "command": "npx",
+    "args": ["bilibili-mcp"],
+    "description": "B站视频搜索 MCP 服务，可以在AI应用中搜索B站视频内容。"
+    }
+  }
+}
+```
+
 ## 快速开始
 > 如果要运行langchain例子，请先配置llm模型，修改.\example.ts文件。
 ```javascript
