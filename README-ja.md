@@ -19,6 +19,20 @@
 ## システム要件
 - Node.js >= 20.12.0
 
+## npm package
+[HQHC](https://github.com/HQHC)が公開したnpmパッケージに感謝
+```json
+{
+  "mcpServers": {
+    "bilibili-search": {
+    "command": "npx",
+    "args": ["bilibili-mcp"],
+    "description": "Bilibili動画検索用MCPサービス。AIアプリケーションでBilibiliの動画コンテンツを検索できます。"
+    }
+  }
+}
+```
+
 ## クイックスタート
 > LangChain の例を実行する場合は、まず LLM モデルを設定し、.\example.ts ファイルを修正してください。
 ```javascript
