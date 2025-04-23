@@ -19,6 +19,20 @@ This is a Bilibili video search server based on the Model Context Protocol (MCP)
 ## System Requirements
 - Node.js >= 20.12.0
 
+## npm package
+Thanks to [HQHC](https://github.com/HQHC)for publishing the npm package
+```json
+{
+  "mcpServers": {
+    "bilibili-search": {
+    "command": "npx",
+    "args": ["bilibili-mcp"],
+    "description": "Bilibili Video Search MCP service, enabling AI applications to search Bilibili video content."
+    }
+  }
+}
+```
+
 ## Quick Start
 > If you want to run the LangChain example, please configure the LLM model first by modifying the .\example.ts file.
 ```javascript
