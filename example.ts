@@ -27,13 +27,18 @@ tools.forEach(tool => {
   console.log('---');
 });
 
-const llm = new ChatOpenAI({
+/*const llm = new ChatOpenAI({
   modelName: "gpt-4o-mini",
   temperature: 0,
   openAIApiKey: "your_api_key", // 替换成你模型的密钥
   configuration: {
     baseURL: "https://www.api.com/v1", // 替换成你模型的API地址
   },
+});*/
+
+const llm = new ChatOpenAI({
+	  modelName: "qwen-plus",
+	  temperature: 0,
 });
 
 const agent = createReactAgent({ 
